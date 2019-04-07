@@ -1,0 +1,11 @@
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">Welcome!</h1>
+    <p class="lead">Welcome to the ticket system created by Julian Alwandy (x14128314) for Cloud Application</p>
+
+    <% @articles["articles"].each do |article| %>
+      <a href="<%= article["url"]%>"><%= article["title"] %></a href="">
+      <% end %>
+  </div>
+</main>

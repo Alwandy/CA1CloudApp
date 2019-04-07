@@ -1,0 +1,6 @@
+<%= bootstrap_form_with(model: @ticket, local: true) do |f| %>
+    <%= f.text_field :title %>
+    <%= f.text_area :issue %>
+    <%= f.select :status, [["Open", 0], ["Pending", 1], ["Closed", 2]], { label: "Status:", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" } %>
+    <%= f.submit "Edit" %>
+  <% end %>

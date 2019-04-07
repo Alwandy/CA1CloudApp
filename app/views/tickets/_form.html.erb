@@ -1,0 +1,9 @@
+<%= bootstrap_form_with(model: @ticket, local: true) do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :issue %>
+  <% if current_user %>
+  <%= f.hidden_field :created_by, value: current_user.id %>
+  <% end %> 
+  <%= f.hidden_field :status, value: "0"%>
+  <%= f.submit "Submit" %>
+<% end %>
